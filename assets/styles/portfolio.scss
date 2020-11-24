@@ -1,0 +1,28 @@
+.portfolio {
+  .header {
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+  .intro {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.95;
+  }
+  h1 {
+    font-weight: 700;
+    letter-spacing: -.25px;
+    font-size: 46px;
+    color: $portfolio-white;
+    margin-top: 13px;
+  }
+  .list-group-item {
+    padding: 0.1rem 1.25rem;
+    cursor: pointer;
+  }
+  .active {
+    background-color: $portfolio-green;
+    border-color: $portfolio-green;
+    color: $portfolio-white;
+  }
+
+}
