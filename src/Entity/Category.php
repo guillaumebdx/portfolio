@@ -12,6 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Category
 {
+    const DEV_IDENTIFIER = 'dev';
+
+    const LEAD_IDENTIFIER = 'lead';
+
+    const SIDE_IDENTIFIER = 'side';
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
