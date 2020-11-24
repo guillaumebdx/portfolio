@@ -15,13 +15,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 h-center">
-                    <ul class="list-group list-group-horizontal-sm">
-                        <li class="list-group-item list-group-item-light">Lead</li>
-                        <li class="list-group-item list-group-item-light active">Dev</li>
-                        <li class="list-group-item list-group-item-light">Side Projects</li>
+                    <ul class="list-group list-group-horizontal-sm project-filters">
+                        <li class="list-group-item list-group-item-light" data-filter="*">All</li>
+                        <li class="list-group-item list-group-item-light" data-filter=".lead-dev">Lead</li>
+                        <li class="list-group-item list-group-item-light active" data-filter=".dev">Dev</li>
+                        <li class="list-group-item list-group-item-light" data-filter=".side">Side Projects</li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="grid">
+            {% for i in 1..5 %}
+                <div class="grid-item side">item side {{ i }}</div>
+            {% endfor %}
+            {% for i in 1..5 %}
+                <div class="grid-item lead-dev">item lead {{ i }}</div>
+            {% endfor %}
+            {% for i in 1..5 %}
+                <div class="grid-item dev">item dev {{ i }}</div>
+            {% endfor %}
         </div>
 
     </div>
