@@ -16,25 +16,29 @@
             <div class="row">
                 <div class="col-12 h-center">
                     <ul class="list-group list-group-horizontal-sm project-filters">
-                        <li class="list-group-item list-group-item-light" data-filter="*">All</li>
+                        <li class="list-group-item list-group-item-light active" data-filter="*">All</li>
                         <li class="list-group-item list-group-item-light" data-filter=".lead-dev">Lead</li>
-                        <li class="list-group-item list-group-item-light active" data-filter=".dev">Dev</li>
+                        <li class="list-group-item list-group-item-light" data-filter=".dev">Dev</li>
                         <li class="list-group-item list-group-item-light" data-filter=".side">Side Projects</li>
                     </ul>
                 </div>
+                <div class="col-12">
+                    <div class="grid">
+                        {% for i in 1..3 %}
+                            {% set item = 'side' %}
+                            {% include 'project/_project.html.twig' %}
+                        {% endfor %}
+                        {% for i in 1..8 %}
+                            {% set item = 'lead-dev' %}
+                            {% include 'project/_project.html.twig' %}
+                        {% endfor %}
+                        {% for i in 1..4 %}
+                            {% set item = 'dev' %}
+                            {% include 'project/_project.html.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="grid">
-            {% for i in 1..5 %}
-                <div class="grid-item side">item side {{ i }}</div>
-            {% endfor %}
-            {% for i in 1..5 %}
-                <div class="grid-item lead-dev">item lead {{ i }}</div>
-            {% endfor %}
-            {% for i in 1..5 %}
-                <div class="grid-item dev">item dev {{ i }}</div>
-            {% endfor %}
-        </div>
-
     </div>
 {% endblock %}
