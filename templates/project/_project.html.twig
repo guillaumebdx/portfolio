@@ -1,12 +1,13 @@
 <div class="grid-item {{ project.category.identifier }} ">
-    <div class="image-container">
         <div class="project-description h-center">
             <p>
                 {{ project.description }}
             </p>
-
         </div>
-        <img src="https://picsum.photos/280/200?random={{ loop.index }}" alt="">
+        {% if project.poster %}
+            <img src="/uploads/{{ project.poster }}" class="poster" alt="">
+        {% else %}
+            <img src="https://picsum.photos/280/150?random={{ loop.index }}" alt="">
+        {% endif %}
         <div class="band">{{ project.name }}</div>
-    </div>
 </div>

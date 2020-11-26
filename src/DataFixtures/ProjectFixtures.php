@@ -14,6 +14,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
     const PROJECTS = [
         [
             'name' => 'Kotation',
+            'picture' => 'kotation.png',
             'category' => Category::DEV_IDENTIFIER,
             'technologies' => [
                 'Symfony',
@@ -25,6 +26,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         ],
         [
             'name' => 'Application Android',
+            'picture' => 'android.jpg',
             'category' => Category::SIDE_IDENTIFIER,
             'technologies' => [
                 'Java',
@@ -35,6 +37,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         ],
         [
             'name' => 'Robo Advisor',
+            'picture' => 'advisor.png',
             'category' => Category::SIDE_IDENTIFIER,
             'technologies' => [
                 'php',
@@ -115,6 +118,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         [
             'name' => 'Audi DBF',
             'category' => Category::LEAD_IDENTIFIER,
+            'picture' => 'audi.jpg',
             'technologies' => [
                 'Symfony',
                 'php',
@@ -134,6 +138,9 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
                 $project->addTechnology($this->getReference($technology));
             }
             $project->setDescription($projectData['description']);
+            if (isset($projectData['picture'])) {
+                $project->setPoster($projectData['picture']);
+            }
             $manager->persist($project);
         }
 
