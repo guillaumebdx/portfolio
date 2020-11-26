@@ -10,8 +10,8 @@ class CategoryFixtures extends Fixture
 {
     const CATEGORIES = [
         'Side project' => Category::SIDE_IDENTIFIER,
-        'En tant que dev' => Category::DEV_IDENTIFIER,
-        'EN tant que lead dev' => Category::LEAD_IDENTIFIER,
+        'Dev' => Category::DEV_IDENTIFIER,
+        'Lead Dev' => Category::LEAD_IDENTIFIER,
     ];
 
     public function load(ObjectManager $manager)

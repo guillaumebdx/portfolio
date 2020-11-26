@@ -15,7 +15,8 @@ class TechnologyFixtures extends Fixture
         'Android',
         'html',
         'css',
-        'symfony',
+        'Symfony',
+        'React',
     ];
 
     public function load(ObjectManager $manager)

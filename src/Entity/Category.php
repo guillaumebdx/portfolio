@@ -14,7 +14,7 @@ class Category
 {
     const DEV_IDENTIFIER = 'dev';
 
-    const LEAD_IDENTIFIER = 'lead';
+    const LEAD_IDENTIFIER = 'lead-dev';
 
     const SIDE_IDENTIFIER = 'side';
 

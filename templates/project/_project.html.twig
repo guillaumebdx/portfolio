@@ -1,9 +1,12 @@
-<div class="grid-item {{ item }} ">
+<div class="grid-item {{ project.category.identifier }} ">
     <div class="image-container">
-        <div class="project-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        <div class="project-description h-center">
+            <p>
+                {{ project.description }}
+            </p>
+
         </div>
-        <img src="https://picsum.photos/280/200?random={{ i }}" alt="">
-        <div class="band">Hello item {{ item }}</div>
+        <img src="https://picsum.photos/280/200?random={{ loop.index }}" alt="">
+        <div class="band">{{ project.name }}</div>
     </div>
 </div>
