@@ -58,6 +58,16 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
             'description' => 'Gestionnaire de licences',
         ],
         [
+            'name' => 'Bot Twitter',
+            'picture' => 'twitter-api.png',
+            'category' => Category::SIDE_IDENTIFIER,
+            'technologies' => [
+                'Symfony',
+                'php',
+            ],
+            'description' => 'Bot twitter / Symfony Command & crontab',
+        ],
+        [
             'name' => 'Kiamo-center',
             'category' => Category::DEV_IDENTIFIER,
             'technologies' => [
@@ -78,6 +88,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         [
             'name' => 'Vivavox',
             'category' => Category::DEV_IDENTIFIER,
+            'picture' => 'vivavox.png',
             'technologies' => [
                 'Symfony',
                 'php',
@@ -97,6 +108,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         ],
         [
             'name' => 'Newdeal',
+            'picture' => 'newdeal.png',
             'category' => Category::LEAD_IDENTIFIER,
             'technologies' => [
                 'Symfony',
