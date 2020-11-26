@@ -10,10 +10,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class AdminController
+ * @package App\Controller
+ * @Route("/admin", name="admin_")
+ */
 class AdminController extends AbstractController
 {
     /**
-     * @Route("/admin", name="admin")
+     * @Route("/project/new", name="project_new")
      */
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
