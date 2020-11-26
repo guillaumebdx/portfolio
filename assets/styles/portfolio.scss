@@ -15,19 +15,47 @@
     color: $portfolio-white;
     margin-top: 13px;
   }
-  .list-group-item {
-    padding: 0.1rem 1.25rem;
-    cursor: pointer;
-  }
+
   .active {
     background-color: $portfolio-green;
     border-color: $portfolio-green;
     color: $portfolio-white;
   }
+
+  .list-group-item {
+    padding: 0.1rem 1.25rem;
+    cursor: pointer;
+    &:hover {
+      @extend .active
+    }
+  }
+
   .grid-item {
     margin: 13px;
+    cursor: pointer;
   }
   .grid {
     margin-top: 26px;
+  }
+  .band {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: 30px;
+    opacity: .7;
+    text-align: center;
+    color: white;
+  }
+  .project-description {
+    z-index: 1000;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    &:hover {
+      opacity: 100;
+    }
   }
 }
