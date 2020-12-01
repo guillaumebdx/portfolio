@@ -9,22 +9,23 @@ use Doctrine\Persistence\ObjectManager;
 class TechnologyFixtures extends Fixture
 {
     const TECHNOLOGIES = [
-        'php',
-        'Javascript',
-        'Java',
-        'Android',
-        'html',
-        'css',
-        'Symfony',
-        'React',
+        'php' => 'fab fa-php',
+        'Javascript' => 'fab fa-js-square',
+        'Java' => 'fab fa-java',
+        'Android' => 'fab fa-android',
+        'html' => 'fab fa-html5',
+        'css' => 'fab fa-css3-alt',
+        'Symfony' => 'fab fa-symfony',
+        'React' => 'fab fa-react',
     ];
 
     public function load(ObjectManager $manager)
     {
 
-        foreach (self::TECHNOLOGIES as $technologyName) {
+        foreach (self::TECHNOLOGIES as $technologyName => $logo) {
             $technology = new Technology();
             $technology->setName($technologyName);
+            $technology->setLogo($logo);
             $this->addReference($technologyName, $technology);
             $manager->persist($technology);
         }

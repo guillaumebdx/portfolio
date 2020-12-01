@@ -1,4 +1,4 @@
-<div class="grid-item {{ project.category.identifier }} ">
+<div class="grid-item {{ project.category.identifier }} " data-toggle="modal" data-target="#modal-{{ project.id }}">
         <div class="project-description h-center">
             <p>
                 {{ project.description }}
@@ -11,3 +11,4 @@
         {% endif %}
         <div class="band">{{ project.name }}</div>
 </div>
+{% include 'project/_modal.html.twig' %}
