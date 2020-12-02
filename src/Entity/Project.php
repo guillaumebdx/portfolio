@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Michelf\MarkdownExtra;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
@@ -237,5 +238,9 @@ class Project
         return $this;
     }
 
+    public function getHtml()
+    {
+        return MarkdownExtra::defaultTransform($this->content);
+    }
 
 }

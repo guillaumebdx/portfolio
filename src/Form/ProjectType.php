@@ -7,6 +7,7 @@ use App\Entity\Project;
 use App\Entity\Technology;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
@@ -36,6 +37,7 @@ class ProjectType extends AbstractType
                 'allow_delete' => true,
                 'download_uri' => true,
                 ])
+            ->add('content', TextareaType::class)
         ;
     }
 

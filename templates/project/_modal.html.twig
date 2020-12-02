@@ -2,9 +2,9 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">
+                <h2 class="modal-title project-title">
                     {{ project.name }}
-                </h5>
+                </h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="project-content text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolore dolorem iusto laboriosam maxime optio quo totam veniam. Ab aliquam amet animi aperiam architecto atque cumque cupiditate dicta distinctio dolore dolores dolorum error est et ex, facilis inventore maiores modi molestiae necessitatibus nihil nostrum numquam obcaecati perferendis perspiciatis quaerat quia quidem ratione recusandae repellendus reprehenderit rerum sit tempore ullam velit voluptates voluptatibus! A ad aliquid animi aperiam blanditiis commodi corporis cupiditate dolorum eaque error eum fugiat illo ipsam iure magnam maxime minima modi mollitia neque numquam odit optio, placeat qui quidem rem reprehenderit totam ullam unde ut vero vitae voluptates!
+                    {{ project.html|raw }}
                 </div>
             </div>
         </div>

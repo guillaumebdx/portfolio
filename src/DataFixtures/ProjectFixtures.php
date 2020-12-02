@@ -66,6 +66,23 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
                 'php',
             ],
             'description' => 'Bot twitter / Symfony Command & crontab',
+            'content' => '### La genèse
+Alors, ce bot, franchement, je l\'ai fais pour le fun.  
+Enfin, un peu plus que du fun. L\'idée était surtout de voir ce qui était possible de réaliser avec l\'[API de twitter](https://developer.twitter.com/en/docs).
+
+### Le résultat
+Ce robot satirique immite les supporteurs qui changent d\'équipe de coeur régulièrement.  
+Toutes les 20 minutes, il supporte une nouvelle ville !  
+D\'après mes calculs, il en a jusqu\'en 2023 !  
+Allez le découvrir ici --> [Bot du FC Procuration](https://mobile.twitter.com/FProcuration)
+
+
+### Le challenge technique
+* Jouer un peu avec les jetons d\'accés
+* Nettoyer le dataset de toutes les villes de France (supprimer les doublons !)
+* Création d\'une commande Symfony que j\'exécute à l\'aide de la crontab !  
+
+[Source github](https://github.com/guillaumebdx/symfony-twitter)'
         ],
         [
             'name' => 'Kiamo-center',
@@ -152,6 +169,9 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
             $project->setDescription($projectData['description']);
             if (isset($projectData['picture'])) {
                 $project->setPoster($projectData['picture']);
+            }
+            if (isset($projectData['content'])) {
+                $project->setContent($projectData['content']);
             }
             $manager->persist($project);
         }
