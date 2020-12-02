@@ -65,6 +65,11 @@ class Project
      */
     private $technologies;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $content;
+
     public function __construct()
     {
         $this->technologies = new ArrayCollection();
@@ -217,6 +222,18 @@ class Project
         if ($posterFile) {
             $this->updatedAt = new \DateTime();
         }
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(?string $content): self
+    {
+        $this->content = $content;
+
         return $this;
     }
 
